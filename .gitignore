@@ -8,7 +8,6 @@ local_settings.py
 diegojhoao_project/db.sqlite3 # Asumiendo que db.sqlite3 está dentro de la carpeta de Django
 diegojhoao_project/db.sqlite3-journal
 diegojhoao_project/staticfiles/
-diegojhoao_project/media/
 
 # React
 diegojhoao_store_frontend/node_modules/
