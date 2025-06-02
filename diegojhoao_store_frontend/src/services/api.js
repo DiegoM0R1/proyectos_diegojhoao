@@ -1,5 +1,5 @@
 // services/api.js
-const API_BASE_URL = 'http://localhost:8000/api'; // Cambia por tu URL de producción
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api'; 
 
 class ApiService {
   async request(endpoint, options = {}) {
