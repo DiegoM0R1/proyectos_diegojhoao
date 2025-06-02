@@ -213,6 +213,8 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", # El puerto donde se ejecuta tu app React
     "http://127.0.0.1:3000", # Alternativa para localhost
+    "https://diegostorefrontend.onrender.com", # ¡AÑADE ESTA LÍNEA CON TU URL REAL!
+
 ]
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
