@@ -1,0 +1,37 @@
+# Entornos Virtuales de Python (Django)
+diegojhoao_project/djvenv/  # O como se llame tu venv si está dentro de la carpeta de Django
+**/__pycache__/
+*.log
+*.pot
+*.pyc
+local_settings.py
+diegojhoao_project/db.sqlite3 # Asumiendo que db.sqlite3 está dentro de la carpeta de Django
+diegojhoao_project/db.sqlite3-journal
+diegojhoao_project/staticfiles/
+diegojhoao_project/media/
+
+# React
+diegojhoao_store_frontend/node_modules/
+diegojhoao_store_frontend/build/
+diegojhoao_store_frontend/coverage/
+diegojhoao_store_frontend/.DS_Store
+diegojhoao_store_frontend/.env.local
+diegojhoao_store_frontend/.env.development.local
+diegojhoao_store_frontend/.env.test.local
+diegojhoao_store_frontend/.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de IDE y OS
+.vscode/
+.idea/
+*.project
+*.tmproj
+*.bak
+*.swp
+*~
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

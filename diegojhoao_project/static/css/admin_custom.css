@@ -1,0 +1,461 @@
+/* static/css/admin_custom.css */
+
+/* ==============================================
+   VARIABLES CSS PERSONALIZADAS
+   ============================================== */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --dark-gray: #34495e;
+    --light-gray: #ecf0f1;
+    --border-radius: 8px;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+/* ==============================================
+   HEADER Y NAVEGACIÓN
+   ============================================== */
+#header {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-gray));
+    box-shadow: var(--shadow);
+    border-bottom: none;
+}
+
+#branding h1 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#branding h1 a:link,
+#branding h1 a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#user-tools {
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--border-radius);
+    padding: 8px 15px;
+    margin: 10px;
+}
+
+#user-tools a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+#user-tools a:hover {
+    color: var(--secondary-color);
+}
+
+/* ==============================================
+   NAVEGACIÓN PRINCIPAL
+   ============================================== */
+.module {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.module h2 {
+    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.module table {
+    width: 100%;
+}
+
+.module th,
+.module caption {
+    background: var(--light-gray);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ==============================================
+   BREADCRUMBS
+   ============================================== */
+.breadcrumbs {
+    background: linear-gradient(90deg, var(--light-gray), white);
+    border-radius: var(--border-radius);
+    margin: 10px 0;
+    padding: 12px 20px;
+    box-shadow: var(--shadow);
+}
+
+.breadcrumbs a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumbs a:hover {
+    color: var(--primary-color);
+}
+
+/* ==============================================
+   FORMULARIOS
+   ============================================== */
+.form-row {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.form-row:hover {
+    background: var(--light-gray);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    transition: var(--transition);
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* ==============================================
+   BOTONES
+   ============================================== */
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input {
+    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.submit-row input:hover {
+    background: linear-gradient(135deg, #2980b9, var(--secondary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button.default,
+input[type="submit"].default {
+    background: linear-gradient(135deg, var(--success-color), #229954);
+}
+
+.button.default:hover,
+input[type="submit"].default:hover {
+    background: linear-gradient(135deg, #229954, var(--success-color));
+}
+
+/* Botón de eliminar */
+.deletelink {
+    background: linear-gradient(135deg, var(--accent-color), #c0392b);
+}
+
+.deletelink:hover {
+    background: linear-gradient(135deg, #c0392b, var(--accent-color));
+}
+
+/* ==============================================
+   TABLAS
+   ============================================== */
+#result_list {
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#result_list thead th {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-gray));
+    color: white;
+    padding: 15px 10px;
+    font-weight: 600;
+}
+
+#result_list thead th a {
+    color: white;
+    text-decoration: none;
+}
+
+#result_list tbody tr {
+    transition: var(--transition);
+}
+
+#result_list tbody tr:hover {
+    background: var(--light-gray);
+}
+
+#result_list tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+#result_list tbody tr:nth-child(even):hover {
+    background: var(--light-gray);
+}
+
+#result_list tbody td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ==============================================
+   CAMPOS DE ARCHIVO E IMAGEN
+   ============================================== */
+.file-upload {
+    border: 2px dashed #ddd;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.file-upload:hover {
+    border-color: var(--secondary-color);
+    background: var(--light-gray);
+}
+
+/* Vista previa de imágenes */
+img {
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ==============================================
+   INLINES (Formularios anidados)
+   ============================================== */
+.inline-group {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.inline-group .module h2 {
+    background: linear-gradient(135deg, var(--warning-color), #e67e22);
+}
+
+.tabular.inline-related tbody tr {
+    transition: var(--transition);
+}
+
+.tabular.inline-related tbody tr:hover {
+    background: var(--light-gray);
+}
+
+/* ==============================================
+   FIELDSETS
+   ============================================== */
+.fieldset {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: 20px 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fieldset h2 {
+    background: linear-gradient(135deg, var(--dark-gray), var(--primary-color));
+    color: white;
+    margin: 0;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+.fieldset .fieldBox {
+    padding: 15px 20px;
+}
+
+/* ==============================================
+   MENSAJES
+   ============================================== */
+.messagelist {
+    margin: 0;
+    padding: 0;
+}
+
+.messagelist li {
+    border-radius: var(--border-radius);
+    margin: 10px 0;
+    padding: 15px 20px;
+    box-shadow: var(--shadow);
+    font-weight: 500;
+}
+
+.messagelist .success {
+    background: linear-gradient(135deg, var(--success-color), #2ecc71);
+    color: white;
+}
+
+.messagelist .warning {
+    background: linear-gradient(135deg, var(--warning-color), #f1c40f);
+    color: white;
+}
+
+.messagelist .error {
+    background: linear-gradient(135deg, var(--accent-color), #e74c3c);
+    color: white;
+}
+
+/* ==============================================
+   FILTROS LATERALES
+   ============================================== */
+#changelist-filter {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+#changelist-filter h2 {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-gray));
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-weight: 600;
+}
+
+#changelist-filter h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 15px;
+}
+
+#changelist-filter a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
+    padding: 8px 15px;
+}
+
+#changelist-filter a:hover {
+    background: var(--light-gray);
+    color: var(--primary-color);
+}
+
+#changelist-filter a.selected {
+    background: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+}
+
+/* ==============================================
+   ACCIONES MASIVAS
+   ============================================== */
+.actions {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.actions select {
+    margin-right: 10px;
+}
+
+.actions .button {
+    margin-left: 10px;
+}
+
+/* ==============================================
+   RESPONSIVE
+   ============================================== */
+@media (max-width: 768px) {
+    #container {
+        padding: 10px;
+    }
+    
+    .module,
+    .fieldset,
+    .inline-group {
+        margin: 10px 0;
+    }
+    
+    #changelist-filter {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    #changelist .results {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+/* ==============================================
+   DARK MODE (OPCIONAL)
+   ============================================== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-gray: #2c3e50;
+        --primary-color: #34495e;
+    }
+    
+    body {
+        background: #1a1a1a;
+        color: #ecf0f1;
+    }
+    
+    .module,
+    .fieldset,
+    .inline-group {
+        background: #2c3e50;
+        color: #ecf0f1;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+        background: #34495e;
+        color: #ecf0f1;
+        border-color: #4a5f7a;
+    }
+}

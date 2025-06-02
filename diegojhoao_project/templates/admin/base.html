@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{# ... otros bloques como branding, extrastyle ... #}
+
+{% block extrahead %} {# extrahead es un buen bloque para scripts en el <head> #}
+  {{ block.super }}
+  <script src="{% static 'js/admin_global_custom.js' %}"></script>
+{% endblock %}
+
+{# O podrías añadir scripts al final del body usando el bloque endscripts #}
+{% block endscripts %}
+    {{ block.super }}
+    {# <script src="{% static 'js/admin_global_footer_custom.js' %}"></script> #}
+{% endblock %}
