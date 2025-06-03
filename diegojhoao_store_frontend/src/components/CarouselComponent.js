@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 function CarouselComponent({ carouselName = "principal" }) {
   const [carouselData, setCarouselData] = useState(null);
@@ -16,7 +17,7 @@ function CarouselComponent({ carouselName = "principal" }) {
       setLoading(true);
       setError(null);
       try {
-        const response = await axios.get(`http://localhost:8000/api/carousels/?nombre=${carouselName}&activo=true`);
+        const response = await axios.get(`<span class="math-inline">\{API\_BASE\_URL\}/api/carousels/?nombre\=</span>{carouselName}&activo=true`);
         if (response.data && Array.isArray(response.data) && response.data.length > 0) {
           setCarouselData(response.data[0]);
         } else if (response.data && response.data.results && Array.isArray(response.data.results) && response.data.results.length > 0) {
