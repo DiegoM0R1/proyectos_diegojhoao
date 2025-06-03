@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-const API_BASE_URL = 'http://localhost:8000/api'; // Cambia por tu URL de producción
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api'; 
 
 function CarouselComponent({ carouselName = "principal" }) {
   const [carouselData, setCarouselData] = useState(null);
