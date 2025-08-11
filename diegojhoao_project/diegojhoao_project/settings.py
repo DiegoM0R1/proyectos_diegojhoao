@@ -213,7 +213,9 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", # El puerto donde se ejecuta tu app React
     "http://127.0.0.1:3000", # Alternativa para localhost
-    "https://diegojhoao.onrender.com",  # ¡AÑADE ESTA LÍNEA CON LA URL EXACTA DE TU FRONTEND!
+    "https://diegojhoao.onrender.com", 
+    "https://diegojhoao.store",  # ¡AÑADE ESTA LÍNEA CON LA URL EXACTA DE TU FRONTEND!
+      # ¡AÑADE ESTA LÍNEA CON LA URL EXACTA DE TU FRONTEND!
 
 ]
 # Password validation
